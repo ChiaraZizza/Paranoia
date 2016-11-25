@@ -3,10 +3,6 @@
 #include <string.h>
 #include "plist.h"
 
-/*******************************************************
- * gcc -Wall -std=gnu99 paranoia.c plist.c -o paranoia *
- *******************************************************/
-
 /*
  * Reads a line of input from the user, storing the first k
  * characters of the input into a char array assumed to be
