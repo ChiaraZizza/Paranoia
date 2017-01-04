@@ -45,13 +45,13 @@ void list_insert(plist_t *list, char *name);
 pnode_t* contains(plist_t *list, char *name);
 
 /* 
- * Removes the given name from the list, returning a pointer to the list
- * with the node containing the name removed.
+ * Removes the given name from the list, returning a pointer to the new list
+ * with that node removed.
  */
 plist_t* list_remove(plist_t *list, char *name);
 
 /*
- * Returns the number of elements in the list.
+ * Returns the size of the list.
  */
 int list_size(plist_t *list);
 
