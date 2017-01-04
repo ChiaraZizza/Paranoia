@@ -43,7 +43,7 @@ void free_list(plist_t *list) {
 }
 
 /*
- * Inserts the given name (as a string) into the end of the list.
+ * Inserts the given name (as a string) at the end of the list.
  */
 void list_insert(plist_t *list, char *name) {
   pnode_t *new_node = make_node(name, NULL);
@@ -60,7 +60,7 @@ void list_insert(plist_t *list, char *name) {
 
 /*
  * Traverses a list and sees where a given name is in the list--returns
- * a pointer to the node containing the name.
+ * a pointer to the node containing that name.
  */
 pnode_t* contains(plist_t *list, char *name) {
   pnode_t *cur = list->first;
@@ -74,8 +74,8 @@ pnode_t* contains(plist_t *list, char *name) {
 }
 
 /* 
- * Removes the given name from the list, returning a pointer to the list
- * with the node containing the name removed.
+ * Removes the given name from the list, returning a pointer to the new list
+ * with that node removed.
  */
 plist_t* list_remove(plist_t *list, char *name) {
   pnode_t *cur = list->first;
@@ -87,7 +87,7 @@ plist_t* list_remove(plist_t *list, char *name) {
 	return list;
       } else {
 	prev->next = cur->next;
-	return list; //returns the node with the removed name in it
+	return list;
       }
     }
     prev = cur;
@@ -97,7 +97,7 @@ plist_t* list_remove(plist_t *list, char *name) {
 }
 
 /*
- * Returns the number of elements in the list.
+ * Returns the size of the list.
  */
 int list_size(plist_t *list) {
   int sum = 0;
